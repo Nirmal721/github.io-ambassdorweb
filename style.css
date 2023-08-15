@@ -1,0 +1,570 @@
+body{
+
+}
+h6{
+    color: rgb(250, 174, 34);
+    margin-left: 31px;
+}
+p{
+  font-size: 18px;
+}
+
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+    background: #fff;
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 15px 0;
+    box-shadow: 0px 0 18px rgba(55, 66, 59, 0.08);
+  }
+  #header .logo {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    margin-left: 75px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: "Poppins", sans-serif;
+    
+  }
+  #header .logo a {
+    color: #090e0b; 
+    text-decoration: none;
+  }
+  #header .logo img {
+    max-height: 40px;
+  }
+  
+  /**
+  * Get Startet Button 
+  */
+  .get-started-btn {
+    margin-left: 22px;
+    background: #fff;;
+    color: #090e0b;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 8px 25px;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 14px;
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 125px;
+  }
+  /* .get-started-btn:hover {
+    color: #fff;
+  } */
+  @media (max-width: 768px) {
+    .get-started-btn {
+      margin: 0 15px 0 0;
+      padding: 6px 18px;
+    }
+  }
+  
+  /*--------------------------------------------------------------
+  # Navigation Menu
+  --------------------------------------------------------------*/
+  /**
+  * Desktop Navigation 
+  */
+  .navbar {
+    padding: 0;
+  }
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  .navbar li {
+    position: relative;
+  }
+  .navbar a, .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #37423b;
+    white-space: nowrap;
+    transition: 0.3s;
+    text-decoration: none;
+  }
+  .navbar a i, .navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    color: #010903;
+  }
+  .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+    color: #010903;
+  }
+  .navbar .dropdown ul {
+    display: block;
+    position: absolute;
+    left: 30px;
+    top: calc(100% + 30px);
+    margin: 0;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: 0.3s;
+    border-radius: 4px;
+  }
+  .navbar .dropdown ul li {
+    min-width: 200px;
+  }
+  .navbar .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 14px;
+    text-transform: none;
+    font-weight: 500;
+  }
+  .navbar .dropdown ul a i {
+    font-size: 12px;
+  }
+  .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+    color: #010b04;
+  }
+  .navbar .dropdown:hover > ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+  .navbar .dropdown .dropdown ul {
+    top: 0;
+    left: calc(100% - 30px);
+    visibility: hidden;
+  }
+  .navbar .dropdown .dropdown:hover > ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+    visibility: visible;
+  }
+  @media (max-width: 1366px) {
+    .navbar .dropdown .dropdown ul {
+      left: -90%;
+    }
+    .navbar .dropdown .dropdown:hover > ul {
+      left: -100%;
+    }
+  }
+  
+  /**
+  * Mobile Navigation 
+  */
+  .mobile-nav-toggle {
+    color: #37423b;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    line-height: 0;
+    transition: 0.5s;
+  }
+  .mobile-nav-toggle.bi-x {
+    color: #fff;
+  }
+  
+  @media (max-width: 991px) {
+    .mobile-nav-toggle {
+      display: block;
+    }
+  
+    .navbar ul {
+      display: none;
+    }
+  }
+  .navbar-mobile {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(32, 38, 34, 0.9);
+    transition: 0.3s;
+    z-index: 999;
+  }
+  .navbar-mobile .mobile-nav-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  .navbar-mobile ul {
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    padding: 10px 0;
+    border-radius: 6px;
+    background-color: #fff;
+    overflow-y: auto;
+    transition: 0.3s;
+  }
+  .navbar-mobile a, .navbar-mobile a:focus {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #37423b;
+  }
+  .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+    color: #5fcf80;
+  }
+  .navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
+    margin: 15px;
+  }
+  .navbar-mobile .dropdown ul {
+    position: static;
+    display: none;
+    margin: 10px 20px;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 1;
+    visibility: visible;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  }
+  .navbar-mobile .dropdown ul li {
+    min-width: 200px;
+  }
+  .navbar-mobile .dropdown ul a {
+    padding: 10px 20px;
+  }
+  .navbar-mobile .dropdown ul a i {
+    font-size: 12px;
+  }
+  .navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
+    color: #5fcf80;
+  }
+  .navbar-mobile .dropdown > .dropdown-active {
+    display: block;
+  }
+
+  #Ambassdor-Program{
+    width: 100%;
+    margin-top: 120px;
+  }
+
+  #Ambassdor-Program h6{
+    margin-left: 0px;
+  }
+  /* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  top: 40%;
+  left: 40px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .social {
+    position: fixed;
+    top: 125px;
+    left: 75px;
+  }
+  .social ul {
+    padding: 0px;
+    transform: translate(-270px, 0);
+  }
+  .social ul li {
+    display: block;
+    margin: 5px;
+    width: 300px;
+    text-align: right;
+    padding: 10px;
+    border-radius: 0 30px 30px 0;
+    transition: all 1s;
+  }
+  
+  /* .social ul li:hover a {
+    color: #000;
+  }
+  .social ul li:hover i {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.36);
+    transform: rotate(360deg);
+    transition: all 1s;
+  } */
+  .social ul li i {
+    margin-left: 10px;
+    color: #fff;
+    background: #010903;
+    border: 1px solid #010903;
+    padding: 0px;
+    border-radius:2px;
+    width: 22px;
+    height: 20px;
+    font-size: 20px;
+    transform: rotate(0deg);
+  }
+  
+
+  #find-your-fit .col-lg-4 h6{
+    margin-left: 0px;
+  }
+
+  .container{
+      padding: 10px 10px;
+  }
+
+/* Form starts  */
+#Application-form .container{
+  width: 100%;
+  border: 2px solid #010903 ;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+#title {
+  text-align: center;
+  font-size: 25px;
+}
+#form-container {
+  /* background-color: rgb(250, 250, 250);   */
+  margin: 0 auto;
+  /* border-radius: 4px; */
+  width: 95%;
+  max-width: 900px;
+  padding: 10px;
+  padding-top: 20px;
+}
+.labels {
+  display: block;
+  text-align: left;
+  width: 40%;
+  padding: 5px;
+  vertical-align: top;
+  margin-top: 10px;
+  width: 85%;
+}
+.rightTab {
+  display: inline-block;
+  text-align: left;
+  width: 48%;
+  vertical-align: middle;
+}
+
+.input-field {
+  height: 35px;
+  width: 280px;
+  padding: 0px;
+  margin: 3px;
+  border-radius: 5px;
+}
+#wrapper {
+  text-align: center;
+  margin-top: 25px;
+}
+
+#submit {
+  background-color: #fff;
+  border-radius: 4px;
+  color: #010903;
+  font-size: 1em;
+  height: 35px;
+  width: 96px;
+  margin: 10px;
+  border: 2px solid #090e0b;
+}
+
+.dropdown1 {
+  height: 35px;
+  width: 280px;
+  padding: 5px;
+  margin: 10px;  
+  margin-top: 15px;
+  border: 2px solid #090e0b ;
+  border-radius: 5px;
+}
+
+.radio, .checkbox {
+  position: relative;
+  left: -43px;
+  margin-left: 10px;
+  display: block;
+  padding-bottom: 10px;
+}
+
+.upload-file{
+  width: 100px;
+  border-radius: 15px;
+  background: #fff;
+}
+
+@media screen and (max-width: 833px) {
+  .input-field {
+    width: 80%;
+  }
+  select {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .labels {
+    width: 100%;
+    text-align: left;
+  }
+  .rightTab {
+    width: 80%;
+    float: left;
+  }
+  .input-field {
+    width: 100%;
+  }
+  select {
+    width: 100%;
+  }
+}
+ /* Form end  */
+
+  .footer {
+	width: 100%;
+	display: block;
+    background: #fff;
+ }
+
+ .inner-footer {
+	 width: 100%;
+	 margin: auto;
+	 padding: 0px 0px;
+	 display: flex;
+	 flex-wrap: wrap;
+	 box-sizing: border-box;
+	 justify-content: center;
+ }
+
+ .footer-logo{ 
+  margin-left: 193px;
+}
+
+.footer-items {
+	width: 16%;
+	padding: 10px 13px;
+	box-sizing: border-box;
+	color: #fff;
+}
+
+.footer-items p {
+	font-size: 16px;
+	text-align: justify;
+	line-height: 25px;
+	color: #fff;
+}
+
+.footer-items h1 {
+	color: #fff;
+}
+
+ul {
+	list-style: none;
+	color: #fff;
+	font-size: 15px;
+	letter-spacing: 0.5px;	
+ }
+
+ul a {
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	transition: 0.3s;
+}
+
+/* ul a:hover {
+	color: #ff9800;
+} */
+
+ul li {
+	margin: 10px 0;
+	height: 25px;
+    color: black
+}
+
+li i {
+	margin-right: 20px;
+}
+
+.footer-bottom {
+	background:#fff;
+	color:black;
+	font-size: 12px;
+	text-align: center;
+}
+
+/* for tablet mode view */
+
+@media screen and (max-width: 1275px) {
+	.footer-items {
+		width: 50%;
+	}
+}
+
+/* for mobile screen view */
+
+@media screen and (max-width: 660px) {
+	.footer-items {
+		width: 100%;
+	}
+}
+
+  
